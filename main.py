@@ -86,11 +86,13 @@ def get_registrations_by_year(db: Session = Depends(get_db)):
 
 @app.get("/api/top-schools")
 def get_top_schools(limit: int = 10, db: Session = Depends(get_db)):
-    """Get the top secondary schools by number of registrations"""
+    """Get the top secondary schools by number of registrations, including academic year and study programme"""
     top_schools = db.query(
         Student.secondary_school,
+        Student.academic_year,
+        Student.study_programme,
         func.count(Student.id).label("total")
-    ).group_by(Student.secondary_school)\
+    ).group_by(Student.secondary_school, Student.academic_year, Student.study_programme)\
      .order_by(func.count(Student.id).desc())\
      .limit(limit)\
      .all()
@@ -99,7 +101,9 @@ def get_top_schools(limit: int = 10, db: Session = Depends(get_db)):
         "top_schools": [
             {
                 "school": school[0],
-                "total": school[1]
+                "academic_year": school[1],
+                "study_programme": school[2],
+                "total": school[3]
             } for school in top_schools
         ]
     }
