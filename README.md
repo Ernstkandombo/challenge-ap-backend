@@ -5,11 +5,11 @@ Welcome to the **Backend Repository** for the Analyst Programmer Technical Chall
 ## 👤 Candidate Details
 
 Please fill in your details **accurately** as they appear on your CV:
-
-- **Full Name**: _e.g., John Doe_  
-- **Email Address**: _e.g., john.doe@example.com_  
-- **Phone Number**: _e.g., +264 81 234 5678_  
+- Ernst Kandombo: _e.g., John Doe_  
+- ernstkandombo@gmail.com: _e.g., john.doe@example.com_  
+- +264 85 706 0994: _e.g., +264 81 234 5678_  
 - **Other Information (Optional)**: _LinkedIn, GitHub profile, etc._
+
 
 ⚠️ **Failure to include accurate personal information will result in disqualification.**
 
@@ -29,7 +29,7 @@ Push all your work and open a **pull request (PR)** from your branch to `main` b
 
 You are required to:
 - Load the provided dataset into **PostgreSQL**.
-- Create a RESTful API using **Python (FastAPI or Flask)**.
+- Create a RESTful API using **Python (FastAPI)**.
 - Implement endpoints such as:
   - `/api/total-registrations`
   - `/api/registrations-by-programme`
@@ -43,11 +43,11 @@ Refer to the printed challenge brief for full requirements.
 
 ## 📄 Submission Checklist
 
-- [ ] All endpoints implemented and tested
-- [ ] `README.md` completed with full contact information
-- [ ] PR opened from your named branch
-- [ ] Code is clean, organized, and committed meaningfully
-- [ ] Optional: Demo available for invigilators
+- [*] All endpoints implemented and tested
+- [*] `README.md` completed with full contact information
+- [*] PR opened from your named branch
+- [*] Code is clean, organized, and committed meaningfully
+- [*] Optional: Demo available for invigilators
 
 ---
 

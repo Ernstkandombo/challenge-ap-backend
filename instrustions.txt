@@ -1,0 +1,51 @@
+# Instructions to Set Up, Seed, and Run the Student Registration Backend
+
+1. **Install Dependencies**
+
+   Ensure you have Python 3.8+ and PostgreSQL installed. Then, install the required Python packages:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. **Set Up PostgreSQL Database**
+
+   - Start your PostgreSQL server.
+   - Create a database named `student_registration`.
+   - Update `.env` with your database credentials.
+
+   
+
+3. **Seed the Database**
+
+   Load the student data into the database by running:
+
+   ```bash
+   python seed_database.py
+   ```
+
+   This will create the tables and populate them with data from `mock_student_data.json`.
+
+4. **Run the FastAPI Application**
+
+   Start the API server with:
+
+   ```bash
+   uvicorn main:app --reload
+   ```
+
+   The API will be available at: http://localhost:8000
+
+   You can view the interactive API docs at: http://localhost:8000/docs
+
+5. **API Endpoints**
+
+   - `/api/total-registrations`
+   - `/api/registrations-by-programme`
+   - `/api/registrations-by-school`
+   - `/api/registrations-by-year`
+   - `/api/top-schools`
+
+---
+
+If you change the database credentials, update the connection string in `database.py` accordingly.
